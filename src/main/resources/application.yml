@@ -14,8 +14,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3308/blog?serverTimezone=Asia/Seoul
-    username: cos
-    password: cos1234
+    username: root
+    password: root
 
   jpa:
     open-in-view: true
@@ -38,7 +38,7 @@ spring:
     org.hibernate.SQL : debug
 
   kafka:
-    bootstrap-servers: 9092  #kakfa 서버정보 / 포트 9092
+    bootstrap-servers: localhost:9092  #kakfa 서버정보 / 포트 9092
 
     consumer:
       group-id: kafka-demo #consumer 의 group id
