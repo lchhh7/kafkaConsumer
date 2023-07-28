@@ -37,22 +37,4 @@ spring:
   logging.level:
     org.hibernate.SQL : debug
 
-  kafka:
-    bootstrap-servers: localhost:9092  #kakfa 서버정보 / 포트 9092
-
-    consumer:
-      group-id: kafka-demo #consumer 의 group id
-      enable-auto-commit: true # offset 저장여부
-      auto-offset-reset: latest # offset 에 오류가 있을경우 , ealiest :맨처음부터  latest : 이전꺼는 무시하고 새로 들어오는 데이터부터 읽기
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer # kafka 에서 데이터를 받아 사용하는 key값(문자열로 제한)
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer # kafka 에서 데이터를 받아 사용하는 value값(문자열로 제한)
-      max-poll-records: 1000 # consumer 가 1번에 가져오는 message 갯수
-
-    producer:
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer # producer에서 kafka로 전달할때 사용하는 key값
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer # producer에서 kafka로 전달할때 사용하는 value값
-
-    template:
-      default-topic: kafka-demo # 기본 설정 topic name
-
 
