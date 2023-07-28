@@ -12,6 +12,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class KafkaProperties {
     public static final String CONSUMER_GROUP_ID = "testGroup";
 
+
     @Value("localhost:9092")
     private String bootStrapServers;
 }
